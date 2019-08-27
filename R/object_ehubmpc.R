@@ -701,7 +701,7 @@ isolve_ehubmpc11 <- function(self,private,control){
 
     prob_data$h[1:(ny*N)] <- as.vector(yminN) * (-1) #modify yminN
     prob_data$h[(ny*N+1):(ny*N+ny*N)] <- as.vector(ymaxN) #modify ymaxN
-    prob_data$c[((nx+ny+nu+ny+nxb+nub)*N+1):((nx+ny+nu+ny+nxb+nub)*N+ne*N)] <- as.vector(t(costN[,1])) #modify cost？？
+    prob_data$c[((nx+ny+nu+ny+nxb+nub)*N+1):((nx+ny+nu+ny+nxb+nub)*N+ne*N)] <- as.vector(t(costN[,1])) #modify cost
     prob_data$h[(2*ny*N+1):(2*ny*N + nu*N)] <- as.vector(umaxN) #umax
     prob_data$h[(2*ny*N+nu*N+1):(2*ny*N + 2*nu*N)] <- as.vector(uminN)*(-1) #umin
     prob_data$b[1:nx] <- x0 # modify x0
